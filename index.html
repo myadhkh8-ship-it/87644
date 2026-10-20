@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#082f49">
+  <meta name="description" content="خدمات عزل خزانات المياه وكشف التسربات في خميس مشيط وأبها. معاينة وحلول عملية واتصال مباشر.">
+  <title>عزل خزانات وكشف تسربات المياه | خميس مشيط وأبها</title>
+  <style>
+    :root {
+      --navy: #082f49;
+      --deep: #061f33;
+      --blue: #0e7490;
+      --cyan: #22d3ee;
+      --sky: #e8f8fb;
+      --sand: #fffaf0;
+      --gold: #f59e0b;
+      --ink: #163047;
+      --muted: #607487;
+      --white: #fff;
+      --line: rgba(8, 47, 73, .1);
+      --shadow: 0 18px 50px rgba(6, 31, 51, .14);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: #edf6f8;
+      color: var(--ink);
+      font-family: Tahoma, Arial, "Segoe UI", sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    .page {
+      width: min(100% - 28px, 980px);
+      margin: 14px auto;
+      overflow: hidden;
+      background: var(--white);
+      border: 1px solid rgba(8, 47, 73, .09);
+      border-radius: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 15px clamp(18px, 4vw, 42px);
+      color: #d8f8fb;
+      background: var(--deep);
+      font-size: .85rem;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      font-weight: 700;
+      color: var(--white);
+    }
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 31px;
+      height: 31px;
+      border-radius: 10px;
+      color: var(--deep);
+      background: var(--cyan);
+      font-size: 1.05rem;
+    }
+    .location {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      color: #9bd9e3;
+      white-space: nowrap;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(40px, 7vw, 76px) clamp(20px, 7vw, 76px) 54px;
+      color: var(--white);
+      background:
+        radial-gradient(circle at 9% 18%, rgba(34, 211, 238, .22), transparent 24%),
+        radial-gradient(circle at 88% 95%, rgba(245, 158, 11, .18), transparent 30%),
+        linear-gradient(135deg, var(--navy) 0%, #07506b 100%);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      left: -70px;
+      bottom: -110px;
+      width: 290px;
+      height: 290px;
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: 50%;
+      box-shadow: 0 0 0 26px rgba(255, 255, 255, .035), 0 0 0 53px rgba(255, 255, 255, .025);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 680px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: 17px;
+      padding: 6px 12px;
+      border: 1px solid rgba(255, 255, 255, .23);
+      border-radius: 999px;
+      color: #baf7ff;
+      background: rgba(255, 255, 255, .08);
+      font-size: .86rem;
+      font-weight: 700;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 0 4px rgba(245, 158, 11, .17);
+    }
+    h1 {
+      max-width: 720px;
+      margin: 0 0 16px;
+      color: var(--white);
+      font-size: clamp(2rem, 6vw, 4.25rem);
+      line-height: 1.17;
+      letter-spacing: -.035em;
+    }
+    .hero p {
+      max-width: 620px;
+      margin: 0 auto;
+      color: #d4f0f3;
+      font-size: clamp(1rem, 2.4vw, 1.18rem);
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 50px;
+      padding: 11px 20px;
+      border: 1px solid transparent;
+      border-radius: 12px;
+      font-weight: 700;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn:focus-visible { outline: 3px solid #facc15; outline-offset: 3px; }
+    .btn-primary { color: var(--deep); background: var(--cyan); box-shadow: 0 8px 20px rgba(34, 211, 238, .2); }
+    .btn-primary:hover { background: #67e8f9; }
+    .btn-light { color: var(--white); border-color: rgba(255, 255, 255, .28); background: rgba(255, 255, 255, .1); }
+    .btn-light:hover { background: rgba(255, 255, 255, .18); }
+    .phone-note { margin-top: 18px !important; color: #a7dbe2 !important; font-size: .9rem !important; }
+    .phone-note strong { color: var(--white); direction: ltr; unicode-bidi: embed; }
+
+    .content { padding: clamp(28px, 6vw, 62px) clamp(18px, 6vw, 64px); }
+    .section-heading { margin-bottom: 22px; }
+    .kicker {
+      margin: 0 0 5px;
+      color: var(--blue);
+      font-size: .83rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+    }
+    h2 {
+      margin: 0;
+      color: var(--navy);
+      font-size: clamp(1.45rem, 4vw, 2.1rem);
+      line-height: 1.3;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 13px;
+      margin-bottom: 52px;
+    }
+    .service-card {
+      min-height: 180px;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 17px;
+      background: linear-gradient(160deg, #fff, #f7fcfd);
+    }
+    .icon {
+      display: grid;
+      place-items: center;
+      width: 46px;
+      height: 46px;
+      margin-bottom: 14px;
+      border-radius: 13px;
+      color: var(--blue);
+      background: var(--sky);
+      font-size: 1.35rem;
+    }
+    .service-card h3 { margin: 0 0 5px; color: var(--navy); font-size: 1.05rem; }
+    .service-card p { margin: 0; color: var(--muted); font-size: .9rem; line-height: 1.7; }
+
+    .benefits-wrap {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 30px;
+      align-items: center;
+      margin-bottom: 45px;
+      padding: clamp(22px, 4vw, 36px);
+      border-radius: 22px;
+      background: var(--sand);
+    }
+    .benefits-wrap h2 { margin-bottom: 8px; }
+    .benefits-intro { margin: 0; color: var(--muted); font-size: .92rem; }
+    .benefits { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .benefit {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      color: var(--ink);
+      font-size: .9rem;
+      font-weight: 700;
+    }
+    .check {
+      flex: 0 0 22px;
+      display: grid;
+      place-items: center;
+      width: 22px;
+      height: 22px;
+      margin-top: 2px;
+      border-radius: 50%;
+      color: #fff;
+      background: var(--blue);
+      font-size: .75rem;
+      font-weight: 900;
+    }
+
+    .cta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 23px clamp(18px, 4vw, 30px);
+      border-radius: 18px;
+      color: var(--white);
+      background: linear-gradient(110deg, var(--navy), var(--blue));
+    }
+    .cta h2 { color: var(--white); font-size: clamp(1.2rem, 3vw, 1.55rem); }
+    .cta p { margin: 3px 0 0; color: #c8e9ed; font-size: .88rem; }
+    .cta .btn { flex: 0 0 auto; }
+
+    footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 20px clamp(18px, 6vw, 64px) 25px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .78rem;
+    }
+    .designer { color: var(--blue); font-weight: 700; }
+    .designer:hover { text-decoration: underline; }
+    .floating-actions {
+      position: fixed;
+      z-index: 10;
+      right: 18px;
+      bottom: max(18px, env(safe-area-inset-bottom));
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .floating-action {
+      display: grid;
+      place-items: center;
+      width: 53px;
+      height: 53px;
+      border: 3px solid #fff;
+      border-radius: 50%;
+      color: #fff;
+      box-shadow: 0 8px 22px rgba(8, 47, 73, .25);
+      font-size: 1.6rem;
+      transition: transform .2s ease;
+    }
+    .floating-action:hover { transform: scale(1.06); }
+    .floating-call { background: var(--blue); }
+    .floating-whatsapp { background: #19a974; }
+    @media (max-width: 700px) {
+      .page { width: 100%; margin: 0; border: 0; border-radius: 0; }
+      .topbar { padding-inline: 18px; }
+      .hero { padding-top: 42px; }
+      .floating-actions { right: 12px; }
+      .services { grid-template-columns: 1fr; }
+      .service-card { min-height: auto; display: grid; grid-template-columns: 46px 1fr; column-gap: 13px; align-items: center; }
+      .service-card .icon { grid-row: span 2; margin: 0; }
+      .service-card h3 { align-self: end; }
+      .service-card p { align-self: start; }
+      .benefits-wrap { grid-template-columns: 1fr; gap: 19px; }
+      .cta { align-items: stretch; flex-direction: column; }
+      .cta .btn { width: 100%; }
+      footer { align-items: flex-start; flex-direction: column; }
+    }
+    @media (max-width: 380px) {
+      .benefits { grid-template-columns: 1fr; }
+      h1 { font-size: 2rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+    }
+  </style>
+  <!-- TikTok Pixel Code Start -->
+  <script>
+  !function (w, d, t) {
+    w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+  var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+  ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+    ttq.load('DACNODJC77U47UVQFOU0');
+    ttq.page();
+  }(window, document, 'ttq');
+  </script>
+  <!-- TikTok Pixel Code End -->
+</head>
+<body>
+  <main class="page">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="الرئيسية">
+        <span class="brand-mark" aria-hidden="true">⌂</span>
+        <span>عزل خزانات وكشف تسربات</span>
+      </a>
+      <span class="location" aria-label="موقع الخدمة">⌖ خميس مشيط وأبها</span>
+    </header>
+
+    <section class="hero" id="top">
+      <div class="hero-content">
+        <div class="eyebrow">حماية تدوم • خدمات في خميس مشيط وأبها</div>
+        <h1>عزل خزانات المياه<br>وكشف تسربات المياه</h1>
+        <p>خدمات عزل خزانات المياه وكشف التسربات في خميس مشيط وأبها، مع فحص أسباب المشكلة وتحديد المعالجة المناسبة.</p>
+        <p class="phone-note">للحجز والاستفسار: <strong>0534347410</strong></p>
+      </div>
+    </section>
+
+    <div class="content">
+      <section aria-labelledby="services-title">
+        <div class="section-heading">
+          <p class="kicker">خدماتنا</p>
+          <h2 id="services-title">حلول متكاملة لمشكلة التسرب</h2>
+        </div>
+        <div class="services">
+          <article class="service-card">
+            <div class="icon" aria-hidden="true">▰</div>
+            <h3>كشف تسربات المياه</h3>
+            <p>فحص علامات التسرب في المواسير والحمامات والجدران وتحديد مصدر المشكلة.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon" aria-hidden="true">♒</div>
+            <h3>عزل الخزانات</h3>
+            <p>عزل خزانات المياه الأرضية والعلوية بمواد مناسبة لطبيعة الخزان.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon" aria-hidden="true">⌁</div>
+            <h3>فحص ومعالجة التسربات</h3>
+            <p>فحص مصدر المشكلة وتقديم المعالجة المناسبة للمكان.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="benefits-wrap" aria-labelledby="benefits-title">
+        <div>
+          <p class="kicker">لماذا نحن؟</p>
+          <h2 id="benefits-title">خدمة واضحة من البداية</h2>
+          <p class="benefits-intro">نهتم بأن يحصل العميل على حل مناسب ونتيجة يطمئن لها.</p>
+        </div>
+        <div class="benefits">
+          <div class="benefit"><span class="check">✓</span><span>استجابة سريعة</span></div>
+          <div class="benefit"><span class="check">✓</span><span>خدمات في خميس مشيط وأبها</span></div>
+          <div class="benefit"><span class="check">✓</span><span>حلول مناسبة للموقع</span></div>
+          <div class="benefit"><span class="check">✓</span><span>تواصل مباشر وسهل</span></div>
+        </div>
+      </section>
+
+      <section class="cta" aria-label="طلب الخدمة">
+        <div>
+          <h2>هل تحتاج عزل خزان أو كشف تسرب مياه؟</h2>
+          <p>تواصل معنا الآن وابدأ بخطوة بسيطة لحماية منزلك.</p>
+        </div>
+        <a class="btn btn-primary" href="tel:0534347410">اتصل بـ 0534347410</a>
+      </section>
+    </div>
+
+    <footer>
+      <span>© <span id="year"></span> جميع الحقوق محفوظة</span>
+      <span>تم التصميم بواسطة <a class="designer" href="https://wa.me/201029095046" target="_blank" rel="noopener">م. نجوى إبراهيم</a></span>
+    </footer>
+  </main>
+
+  <div class="floating-actions" aria-label="خيارات التواصل السريعة">
+    <a class="floating-action floating-call" href="tel:0534347410" aria-label="اتصل بنا">☎</a>
+    <a class="floating-action floating-whatsapp" href="https://wa.me/966534347410" target="_blank" rel="noopener" aria-label="تواصل معنا عبر واتساب">◉</a>
+  </div>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.addEventListener('click', function(event) {
+      var link = event.target.closest('a[href]');
+      if (!link) return;
+      var href = link.getAttribute('href') || '';
+      var isCall = href.indexOf('tel:0534347410') === 0;
+      var isWhatsApp = href.indexOf('https://wa.me/966534347410') === 0;
+      if ((isCall || isWhatsApp) && window.ttq && typeof window.ttq.track === 'function') {
+        window.ttq.track('Contact', {content_name: isCall ? 'Phone Call' : 'WhatsApp'});
+      }
+    }, true);
+  </script>
+</body>
+</html>
